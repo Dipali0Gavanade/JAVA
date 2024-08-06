@@ -1,0 +1,70 @@
+*******    INTRODUCTION TO JAVA   *******
+
+> Basic Structure of JAVA
+       public class Main {
+             public static void main(String [] arg) { 
+                System.out.println("Hello World ");
+           }
+   
+        }
+
+> What is class in java ?
+                        -> A class in Java is a user-defined data type that 
+                           serves as a template or blueprint for creating 
+                           objects. It encapsulates data for the object and 
+                           methods to manipulate that data.
+                        A class can be defined using the class keyword
+
+> Commands to RUN java program
+     "javac Main.java"->"javac filename.java" -----compile the program
+     " java Main"->"java filename" --------RUN program
+
+> static 
+       - Direct Invocation without Object Instantiation:
+                                          The main method is the starting point of a Java program. It needs to be accessible before any objects of the class are created. Declaring it as static allows the Java runtime to call the method without creating an instance of the class.
+       - No Dependency on Instance State:
+                           The main method does not depend on instance variables or methods. It is a global entry point and does not operate on any specific object. Therefore, it makes sense to make it static.
+       - Consistency:
+                   The static keyword ensures that there is only one main method for the class, providing a consistent entry point for the program.
+
+> Void 
+      Return type of the function . and when we don't want to return anything then we use void as a return type
+
+> String[] arg
+            It is a command line argument . it is basicaly a collection of strings.
+             What ever input we giveing in terminal it stores in this array
+
+> package
+              A package is a namespace that organizes a set of related classes and interfaces. Conceptually, you can think of packages as similar to folders on your computer. They help in managing the code and avoiding name conflicts.
+               Help to provide the rules to the foile which help to organize code
+
+> Input
+        Scanner input = new Scanner(System.in);
+        int abc = input.nextLine();
+nextInt -----> take integer only
+nextLine ---->  take string input entier line
+next   ------> take string input but only word
+
+> Primitives 
+            [the datatype that can't br break further suppose we have string"hello" we can break it in "h","e","l","l","o" so String is not a primitive datatype . also the char we can not break "h" further like wise]
+
+                int rollno = 98;
+                char letter ="r";
+                float mark = 98.8f;
+                double ld = 4375398.4383;
+                long li = 745983789274985698L;
+                boolean check = false;
+
+
+
+
+              
+
+
+
+
+
+
+
+
+   
