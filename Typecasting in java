@@ -1,0 +1,62 @@
+*******   TYPECASTING   ********
+
+  Type casting in Java is the process of converting a variable from one data type to another.
+It can be done in two ways: automatically by the compiler (implicit casting) or manually by the programmer (explicit casting)
+
+> Implicit Casting (Widening Conversion)
+               Implicit casting occurs when a smaller type is converted to a larger type size automatically by the Java compiler. This is also known as widening conversion. It happens without any explicit code from the programmer because there is no risk of data loss.
+
+               Examples:
+
+                      byte to 'short', 'int', 'long', 'float', or 'double'
+                      short to 'int', 'long', 'float', or 'double'
+                      int to 'long', 'float', or 'double'
+                      long to 'float' or 'double'
+                      float to 'double'
+
+                      // int myInt = 9;
+                      // double myDouble = myInt; 
+
+> Explicit Casting (Narrowing Conversion)
+          Explicit casting is required when converting from a larger type to a smaller size type, which is also known as narrowing conversion. This is done manually by placing the type in parentheses in front of the value to be converted. There is a risk of data loss in this type of conversion.
+          
+          Examples:
+
+                double to 'float', 'long', 'int', 'short', or 'byte'
+                float to 'long', 'int', 'short', or 'byte'
+                long to 'int', 'short', or 'byte'
+                int to 'short' or 'byte'
+                short to 'byte'
+
+                // double myDouble = 9.78;
+                // int myInt = (int) myDouble; 
+
+> Automatic type promotion in expression 
+       1]   int a = 257;
+            byte b = (byte)(a);
+            
+            output--> 1     -------> it gives the reminder as a output //257 % 256 = 1
+
+
+       2]   int number = "A";
+            System.out.println(number);
+            
+            output--> 65    --------> it gives the ascii value of that character
+
+> Overflow and Underflow:
+              When casting large values into smaller types, data may wrap around due to overflow.
+              Example:
+                    int largeValue = 130;
+                    byte smallValue = (byte) largeValue;  // smallValue will be -126 due to overflow
+> Loss of Precision:
+              When casting floating-point numbers to integers, the fractional part is truncated.
+              Example:
+                    double myDouble = 9.99;
+                    int myInt = (int) myDouble;  // myInt will be 9, fractional part lost
+> Casting Objects to Unrelated Types:
+              Trying to cast objects of unrelated types will throw a ClassCastException.
+              Example:
+                    Object myObject = new String("Hello");
+                    Integer myInteger = (Integer) myObject;  // Throws ClassCastException
+
+
